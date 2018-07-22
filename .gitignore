@@ -1,0 +1,14 @@
+# Created by .ignore support plugin (hsz.mobi)
+# windows:
+Thmbs.db
+ehthumbs.db
+Desktop.ini
+
+# python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+migrations/
+.idea/
+logs/
