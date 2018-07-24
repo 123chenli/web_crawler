@@ -48,7 +48,6 @@ def book(target_url):
             desc = item.find('span', {'class': 'inq'}).text.strip()
         else:
             desc = 'no description'
-        # print((r_name, name2, url, info, score, num, desc))
         books.append((r_name, name2, url, info, score, num, desc))  # 以元组的形式存入列表
     return books  # 返回一页的书籍
 
@@ -56,7 +55,6 @@ def book(target_url):
 for n in range(10):
     url1 = 'https://book.douban.com/top250?start=' + str(n * 25)
     tmp = book(url1)
-    # print(tmp)
     with open('file/booktop250.xls', 'a', encoding='utf-8') as d:  # 新建一个booktop250的文件，在后面追加的形式（a）
         for i in tmp:
             print(i[0]+"\t"+i[1]+"\t"+i[2]+"\t"+i[3]+"\t"+i[4]+"\t"+i[5]+"\t"+i[6], file=d)
