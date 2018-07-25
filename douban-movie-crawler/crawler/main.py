@@ -1,7 +1,11 @@
-from .manager import Managerl
-from .downloader import download
-from .parser import parse
-from .processor import Processor
+# from .manager import Managerl
+from manager import Managerl
+# from .downloader import download
+from downloader import download
+# from .parser import parse
+from paramer import parsell
+# from .processor import Processor
+from processor import Processor
 
 
 movie_id = 26752088
@@ -30,7 +34,7 @@ class Crawler(object):
             html = download(new_url)
             if html is None:
                 continue
-            links, results = parse(html, new_url)
+            links, results = parsell(html, new_url)
             if len(links) > 0:
                 self._manager.append_new_urls(links)
             if len(results) > 0:

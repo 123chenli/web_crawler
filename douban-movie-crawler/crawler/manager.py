@@ -9,7 +9,7 @@ class Managerl(object):
         self.new_urls = []
         self.old_urls = []
 
-    def append_new_url(self, urls):
+    def append_new_urls(self, urls):
         if len(urls) == 0:
             return
         for url in urls:
@@ -23,7 +23,7 @@ class Managerl(object):
             if '&percent_type' in url:
                 url = url.replace('&percent_type', '')
             # url重复检查
-            if url not in self.new_url and url not in self.old_url:
+            if url not in self.new_urls and url not in self.old_urls:
                 self.new_urls.append(url)
 
     def has_new_url(self):

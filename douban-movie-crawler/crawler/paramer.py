@@ -6,7 +6,7 @@ import urllib.parse
 
 from bs4 import BeautifulSoup
 
-def parse(html, url):
+def parsell(html, url):
     soup = BeautifulSoup(html, 'html.parser')
 
     # 超链接列表
